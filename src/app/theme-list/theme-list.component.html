@@ -21,19 +21,20 @@
   </div>
 </div> -->
 
-<main>
-  <h1>Welcome to the Energy Reproduction Blog</h1>
-  <div class="blog-posts">
-    <!-- Sample blog post cards for the latest topics -->
-    <!-- Replace the image, title, and description with actual content -->
+<app-loader *ngIf="!themeList" />
 
-    <div class="blog-post-card">
-      <img src="#" alt="Blog Post 1" />
-      <h2>Blog Post Title 1</h2>
-      <p>Blog Post Description 1</p>
-      <button href="" class="btn" routerLink="/themeId">More Details</button>
-    </div>
-    <!-- <div class="blog-post-card">
+<h1>Welcome to the Energy Reproduction Blog</h1>
+<div class="blog-posts">
+  <!-- Sample blog post cards for the latest topics -->
+  <!-- Replace the image, title, and description with actual content -->
+
+  <div class="blog-post-card" *ngFor="let theme of themeList">
+    <img src="{{ theme.image }}" alt="Blog Post 1" />
+    <h2>{{ theme.model }}</h2>
+    <p>{{ theme.description }}</p>
+    <button href="" class="btn" routerLink="/themeId">More Details</button>
+  </div>
+  <!-- <div class="blog-post-card">
       <img src="#" alt="Blog Post 2" />
       <h2>Blog Post Title 2</h2>
       <p>Blog Post Description 2</p>
@@ -51,6 +52,5 @@
       <p>Blog Post Description 2</p>
       <button class="btn" routerLink="/themeId">More Details</button>
     </div> -->
-    <!-- Repeat the structure for the other blog post cards -->
-  </div>
-</main>
+  <!-- Repeat the structure for the other blog post cards -->
+</div>
