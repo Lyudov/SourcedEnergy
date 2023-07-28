@@ -21,12 +21,18 @@ header {
     align-items: center;
 }
 
+.nav-log-reg {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
 .nav-links li {
     margin-left: 20px;
 }
 
 .nav-links li:first-child {
-    margin-left: 0;
+    margin-left: 20px;
 }
 
 .nav-links a {

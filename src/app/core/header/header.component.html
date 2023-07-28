@@ -20,8 +20,10 @@
       <li><a routerLink="/">HOME</a></li>
       <li><a routerLink="/theme">BLOG</a></li>
       <li><a routerLink="/profile">PROFILE</a></li>
-      <li><a routerLink="/login">LOGIN</a></li>
-      <li><a routerLink="/register">REGISTER</a></li>
+      <div class="nav-log-reg" *ngIf="isLogged">
+        <li><a routerLink="/login">LOGIN</a></li>
+        <li><a routerLink="/register">REGISTER</a></li>
+      </div>
     </ul>
   </nav>
 </header>
