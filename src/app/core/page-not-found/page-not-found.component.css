@@ -1,0 +1,41 @@
+.not-found {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75.8vh;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 100px;
+    margin-bottom: 20px;
+    color: #49b970;
+}
+
+p {
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    font-size: 16px;
+    background-color: #49b970;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+a:hover {
+    background-color: #49b970;
+    color: #fff;
+}

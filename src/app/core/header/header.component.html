@@ -17,12 +17,32 @@
   <nav class="navbar">
     <div class="logo">Energy Reproduction</div>
     <ul class="nav-links">
-      <li><a routerLink="/">HOME</a></li>
-      <li><a routerLink="/theme">BLOG</a></li>
-      <li><a routerLink="/profile">PROFILE</a></li>
-      <div class="nav-log-reg" *ngIf="isLogged">
-        <li><a routerLink="/login">LOGIN</a></li>
-        <li><a routerLink="/register">REGISTER</a></li>
+      <li>
+        <a routerLink="/">HOME</a>
+      </li>
+      <li>
+        <a routerLink="/theme">BLOG</a>
+      </li>
+      <li>
+        <a routerLink="/profile">EXAMPLE</a>
+      </li>
+      <div class="nav-log-reg">
+        <ul *ngIf="!isLoggedIn">
+          <li>
+            <a routerLink="/auth/login">LOGIN</a>
+          </li>
+          <li>
+            <a routerLink="/auth/register">REGISTER</a>
+          </li>
+        </ul>
+        <ul *ngIf="isLoggedIn">
+          <li>
+            <a routerLink="/auth/profile">{{ user?.username }}'s PROFILE</a>
+          </li>
+          <li>
+            <a routerLink="/auth/logout">LOGOUT</a>
+          </li>
+        </ul>
       </div>
     </ul>
   </nav>
