@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from '../api.service';
-import { Theme } from '../interfaces/theme';
+import { ApiService } from '../../api.service';
+import { Theme } from '../../shared/interfaces/theme';
 
 @Component({
   selector: 'app-theme-list',
