@@ -25,14 +25,13 @@
 
 <h1>Welcome to the Energy Reproduction Blog</h1>
 <div class="blog-posts">
-  <!-- Sample blog post cards for the latest topics -->
-  <!-- Replace the image, title, and description with actual content -->
-
   <div class="blog-post-card" *ngFor="let theme of themeList">
     <img src="{{ theme.image }}" alt="Blog Post 1" />
-    <h2>{{ theme.model }}</h2>
+    <h2>{{ theme.type }}</h2>
     <p>{{ theme.description }}</p>
-    <button href="" class="btn" routerLink="/themeId">More Details</button>
+    <button href="" class="btn" routerLink="/theme/detail:id">
+      More Details
+    </button>
   </div>
   <!-- <div class="blog-post-card">
       <img src="#" alt="Blog Post 2" />

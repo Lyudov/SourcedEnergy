@@ -1,5 +1,7 @@
 import { RouterModule, Routes } from '@angular/router';
-import { ThemeListComponent } from './theme-list/theme-list.component';
+import { NewThemeComponent } from './new-theme/new-theme.component';
+import { ThemeDetailsComponent } from './theme-details/theme-details.component';
+import { MainComponent } from './main/main.component';
 
 const routes: Routes = [
   {
@@ -7,7 +9,24 @@ const routes: Routes = [
     children: [
       {
         path: 'list',
-        component: ThemeListComponent,
+        component: MainComponent,
+        data: {
+          title: 'Blog',
+        },
+      },
+      {
+        path: 'new',
+        component: NewThemeComponent,
+        data: {
+          title: 'New Theme',
+        },
+      },
+      {
+        path: 'detail/:id',
+        component: ThemeDetailsComponent,
+        data: {
+          title: 'Details',
+        },
       },
     ],
   },

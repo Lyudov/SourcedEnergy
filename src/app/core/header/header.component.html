@@ -21,11 +21,11 @@
         <a routerLink="/">HOME</a>
       </li>
       <li>
-        <a routerLink="/theme">BLOG</a>
+        <a routerLink="/theme/list">BLOG</a>
       </li>
-      <li>
-        <a routerLink="/profile">EXAMPLE</a>
-      </li>
+      <!-- <li>
+        <a routerLink="/auth/profile">PROFILE</a>
+      </li> -->
       <div class="nav-log-reg">
         <ul *ngIf="!isLoggedIn">
           <li>
@@ -37,7 +37,10 @@
         </ul>
         <ul *ngIf="isLoggedIn">
           <li>
-            <a routerLink="/auth/profile">{{ user?.username }}'s PROFILE</a>
+            <a routerLink="/theme/new">NEW THEME</a>
+          </li>
+          <li>
+            <a routerLink="/auth/profile">PROFILE</a>
           </li>
           <li>
             <a routerLink="/auth/logout">LOGOUT</a>

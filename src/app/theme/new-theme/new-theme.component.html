@@ -1,0 +1,37 @@
+<div class="new-theme">
+  <div class="container">
+    <h1>Create New Theme</h1>
+    <form class="create-theme-form">
+      <div class="form-group">
+        <label for="theme-name">Theme Name:</label>
+        <input
+          type="text"
+          id="theme-name"
+          name="themeName"
+          placeholder="Enter theme name"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="theme-description">Theme Description:</label>
+        <textarea
+          id="theme-description"
+          name="themeDescription"
+          placeholder="Enter theme description"
+          required
+        ></textarea>
+      </div>
+      <div class="form-group">
+        <label for="theme-image">Theme Image:</label>
+        <input
+          type="file"
+          id="theme-image"
+          name="themeImage"
+          accept="image/*"
+          required
+        />
+      </div>
+      <button type="submit">Create Theme</button>
+    </form>
+  </div>
+</div>

@@ -1,7 +1,8 @@
 import { User } from './user';
 
 export interface Theme {
-  model: string;
+  _id: string;
+  type: string;
   year: string;
   description: string;
   price: number;
