@@ -1,3 +1,22 @@
-<main>
-  <app-theme-list />
-</main>
+<ng-container *ngIf="isLoggedIn">
+  <main>
+    <app-theme-list />
+  </main>
+</ng-container>
+<ng-container *ngIf="!isLoggedIn">
+  <div class="welcome">
+    <h3>Welcome to the Sourced Energy Blog!</h3>
+    <p>
+      Our blog is dedicated to exploring sustainable energy solutions. Discover
+      the latest advancements in renewable energy, from solar and wind power to
+      hydroelectricity and more. Join us as we work towards a greener future and
+      make a positive impact on the world. Let's create a sustainable and
+      brighter tomorrow together!
+    </p>
+    <p>Sincerely,</p>
+    <p>The Sourced Energy Team</p>
+    <div>
+      <img src="" alt="welcome-image" />
+    </div>
+  </div>
+</ng-container>

@@ -2,3 +2,38 @@ main {
     height: 100%;
     padding: 195px;
 }
+
+.welcome {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the heading */
+.welcome h3 {
+    font-size: 24px;
+    color: #49b970;
+    margin-bottom: 10px;
+}
+
+/* Styling for the paragraphs */
+.welcome p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* Styling for the image container */
+.welcome div {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Styling for the image */
+.welcome img {
+    max-width: 100%;
+    border-radius: 5px;
+}
