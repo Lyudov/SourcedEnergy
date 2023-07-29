@@ -45,5 +45,18 @@
 }
 
 .login-container button:hover {
-    background-color: #49b970;
+    background-color: #28e66a;
+}
+
+p {
+    padding: 0;
+    color: #807e7e;
+}
+
+a {
+    color: #49b970;
+}
+
+a:hover {
+    color: #28e66a;
 }
