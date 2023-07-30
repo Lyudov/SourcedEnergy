@@ -1,14 +1,51 @@
 <div class="register-container">
   <div class="container">
     <h3>Create an Account</h3>
-    <form>
-      <input type="email" name="email" placeholder="Email" />
-      <input type="password" name="password" placeholder="Password" />
+    <form [formGroup]="form">
       <input
-        type="password"
-        name="confirm-password"
-        placeholder="Confirm Password"
+        type="name"
+        name="username"
+        placeholder="Username"
+        formControlName="username"
       />
+      <ng-container>
+        <p class="error">Username is required!</p>
+        <p class="error">Username's length should not be less than</p>
+      </ng-container>
+      <input
+        type="email"
+        name="email"
+        placeholder="Email"
+        formControlName="email"
+      />
+      <ng-container>
+        <p class="error">Email is required!</p>
+        <p class="error">Email is not valid!</p>
+      </ng-container>
+      <ng-container formGroupName="pass">
+        <input
+          type="password"
+          name="password"
+          placeholder="******"
+          formControlName="password"
+        />
+        <ng-container>
+          <p class="error">Password is required!</p>
+          <p class="error">Password must be at least characters!</p>
+        </ng-container>
+
+        <input
+          type="password"
+          name="rePassword"
+          placeholder="******"
+          formControlName="rePassword"
+        />
+        <ng-container
+          *ngIf="form.get('pass')?.errors?.['matchPasswordGroupValidator'] && form.get('pass')?.get('rePassword')?.touched"
+        >
+          <p class="error">Repeat Password does not match password!</p>
+        </ng-container>
+      </ng-container>
       <button type="submit">Register</button>
       <p class="text-center">
         Have an account?

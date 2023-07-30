@@ -48,7 +48,7 @@
     background-color: #28e66a;
 }
 
-p {
+.text-center {
     padding: 0;
     color: #807e7e;
 }
@@ -59,4 +59,15 @@ a {
 
 a:hover {
     color: #28e66a;
+}
+
+p.error {
+    text-align: left;
+    border-radius: 0.3em;
+    color: red;
+    padding-top: 0;
+}
+
+.input-error {
+    border-left-color: red;
 }
