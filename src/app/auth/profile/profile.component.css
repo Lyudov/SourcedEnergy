@@ -45,3 +45,18 @@ img {
 .user-info p {
     margin-bottom: 10px;
 }
+
+button {
+    width: 50%;
+    padding: 10px 10px;
+    font-size: 16px;
+    background-color: #49b970;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #28e66a;
+}

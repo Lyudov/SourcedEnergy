@@ -61,6 +61,12 @@ p {
     color: #807e7e;
 }
 
+.error {
+    padding: 0;
+    color: #fa0202;
+}
+
+
 a {
     color: #49b970;
 }

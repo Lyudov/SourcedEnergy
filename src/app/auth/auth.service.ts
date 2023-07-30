@@ -6,7 +6,12 @@ import { User } from '../shared/interfaces';
   providedIn: 'root',
 })
 export class AuthService {
-  user: User | null = null;
+  user: User | null = {
+    firstName: 'Sa',
+
+    lastName: 'So',
+    email: 'samisousa@gmail.',
+  } as any;
 
   get isLoggedIn() {
     return this.user != null;

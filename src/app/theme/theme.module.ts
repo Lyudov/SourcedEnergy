@@ -6,6 +6,7 @@ import { SharedModule } from '../shared/shared.module';
 import { NewThemeComponent } from './new-theme/new-theme.component';
 import { ThemeDetailsComponent } from './theme-details/theme-details.component';
 import { MainComponent } from './main/main.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,7 @@ import { MainComponent } from './main/main.component';
     ThemeDetailsComponent,
     MainComponent,
   ],
-  imports: [CommonModule, SharedModule, ThemeRoutingModule],
+  imports: [CommonModule, SharedModule, FormsModule, ThemeRoutingModule],
   exports: [ThemeListComponent],
 })
 export class ThemeModule {}

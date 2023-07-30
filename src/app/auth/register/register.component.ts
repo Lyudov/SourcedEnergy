@@ -13,11 +13,11 @@ import {
 })
 export class RegisterComponent {
   form = this.fb.group({
-    username: ['', [Validators.required]],
+    username: ['', [Validators.required, Validators.minLength(3)]],
     email: ['', [Validators.required, appEmailValidator(appEmailDomains)]],
     pass: this.fb.group(
       {
-        password: [],
+        password: ['', [Validators.required, Validators.minLength(6)]],
         rePassword: [],
       },
       {
@@ -27,4 +27,8 @@ export class RegisterComponent {
   });
 
   constructor(private fb: FormBuilder) {}
+
+  registerHandler() {
+    console.log(this.form.value);
+  }
 }

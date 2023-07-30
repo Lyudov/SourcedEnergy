@@ -33,7 +33,7 @@
         Password is required!
       </p>
       <p class="error" *ngIf="passwordInput.errors?.['minlength']">
-        Password must be at least characters!
+        Password must be at least 6 characters!
       </p>
     </ng-container>
     <button [disabled]="form.invalid">Login</button>

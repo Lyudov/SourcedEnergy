@@ -1,7 +1,11 @@
 <div class="new-theme">
   <div class="container">
     <h1>Create New Theme</h1>
-    <form class="create-theme-form">
+    <form
+      class="create-theme-form"
+      #form="ngForm"
+      (ngSubmit)="newThemeHandler(form)"
+    >
       <div class="form-group">
         <label for="theme-name">Theme Name:</label>
         <input
@@ -9,8 +13,21 @@
           id="theme-name"
           name="themeName"
           placeholder="Enter theme name"
+          #nameInput="ngModel"
+          ngModel
           required
+          minlength="5"
         />
+        <ng-container *ngIf="nameInput.touched">
+          <p class="error" *ngIf="nameInput.errors?.['required']">
+            Theme name is required.
+          </p>
+          <p class="error" *ngIf="nameInput.errors?.['minlength']">
+            Theme name must be at least
+            {{nameInput.errors?.['minlength']['requiredLength']}} characters
+            long.
+          </p>
+        </ng-container>
       </div>
       <div class="form-group">
         <label for="theme-description">Theme Description:</label>
@@ -18,8 +35,21 @@
           id="theme-description"
           name="themeDescription"
           placeholder="Enter theme description"
+          #textInput="ngModel"
+          ngModel
           required
+          minlength="10"
         ></textarea>
+        <ng-container *ngIf="textInput.touched">
+          <p class="error" *ngIf="textInput.errors?.['required']">
+            The field with your description is required.
+          </p>
+          <p class="error" *ngIf="textInput.errors?.['minlength']">
+            Description must be at least
+            {{textInput.errors?.['minlength']['requiredLength']}} characters
+            long.
+          </p>
+        </ng-container>
       </div>
       <div class="form-group">
         <label for="theme-image">Theme Image:</label>
@@ -28,10 +58,12 @@
           id="theme-image"
           name="themeImage"
           accept="image/*"
+          ngModel
           required
         />
       </div>
-      <button type="submit">Create Theme</button>
+      <button [disabled]="form.invalid">Create Theme</button>
+      <button type="submit">Cancel</button>
     </form>
   </div>
 </div>
