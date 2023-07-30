@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-theme-details',
   templateUrl: './theme-details.component.html',
-  styleUrls: ['./theme-details.component.css']
+  styleUrls: ['./theme-details.component.css'],
 })
 export class ThemeDetailsComponent {
-
+  constructor(private activatedRoute: ActivatedRoute) {
+    console.log(this.activatedRoute.snapshot.data?.['theme']);
+  }
 }

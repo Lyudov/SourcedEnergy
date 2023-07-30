@@ -14,4 +14,8 @@ export class ApiService {
   loadThemes() {
     return this.httpClient.get<Theme[]>(`${apiURL}/themes`);
   }
+
+  loadTheme(id: Number) {
+    return this.httpClient.get<Theme>(`${apiURL}/themes/${id}`);
+  }
 }
